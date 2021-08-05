@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  nexus:
+    image: sonatype/nexus3:3.33.0
+    restart: always
+    ports:
+      - 8081:8081  # nexus
+      - 8082:8082  # hosted
+      - 8083:8083  # group
+    volumes:
+      - ./nexus-data:/nexus-data
+ 
